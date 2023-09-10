@@ -4,9 +4,28 @@ body {
     align-items: center;
     flex-direction: column;
 }
-.board {
+
+.header {
     width: 500px;
-    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.board {
+    width: 980px;
+    height: 980px;
     display: grid;
     border: 1px solid #000000;
+}
+
+.footer {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }

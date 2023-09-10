@@ -12,14 +12,15 @@
 <body>
     <h1>Etch-A-Sketch</h1>
     <div class="header">
-        <h6>Select size of board</h6>
+        <h6>Select number of squares for board:</h6>
         <button id="popup" class="btn btn-danger">Select</button>
     </div>
+    <p id="errorMsg"></p>
     <div class="board"></div>
     <div class="footer">
         <button class="btn btn-dark" onclick="setColor('black')">Black</button>
         <button class="btn btn-warning" onclick="setColor('random')">Random</button>
-        <button class="btn btn-primary">Clear</button>
+        <button class="btn btn-primary" onclick="clearBoard()">Clear</button>
     </div>
 </body>
 </html>

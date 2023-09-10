@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-    createBoard(4);
+    createBoard(16);
     setColor();
 
     let btnPopup = document.querySelector("#popup");
@@ -28,7 +28,12 @@ function createBoard(size) {
 
 function getSize() {
     let input = prompt("How many squares?");
-    return input;
+    let errorMsg = document.querySelector("#errorMsg");
+    if(input == "" || input < 0 || input > 100){
+        errorMsg.innerHTML = "Please provide a number between 0 and 100";
+    } else {
+        return input;
+    }
 }
 
 function colorDiv() {
@@ -42,4 +47,10 @@ function colorDiv() {
 
 function setColor(colorChoice) {
     color = colorChoice;
+}
+
+function clearBoard() {
+    let divs = document.querySelectorAll("div");
+
+    divs.forEach((div) => div.style.backgroundColor = "white");
 }
