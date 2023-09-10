@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
     createBoard(4);
     setColor();
+
+    let btnPopup = document.querySelector("#popup");
+    btnPopup.addEventListener("click", function() {
+        let size = getSize();
+        createBoard(size);
+    })
     console.log("hi");
 })
 
@@ -21,7 +27,8 @@ function createBoard(size) {
 }
 
 function getSize() {
-    let size = prompt("How many squares?");
+    let input = prompt("How many squares?");
+    return input;
 }
 
 function colorDiv() {
